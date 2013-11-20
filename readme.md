@@ -1,6 +1,8 @@
 # Feather
 Concieved, Designed and Developed by [Cam Wright](mailto:cam.wright@gmail.com)
+
 Based upon Flask, a simple web framework for Python.
+
 Version: pre-0.1 (Prototype)
 
 ## Installation
