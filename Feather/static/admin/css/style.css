@@ -1,0 +1,210 @@
+/*
+	Feather - Admin Styles
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,5600);
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+
+h1, h3 {
+	font-weight: 600;
+}
+
+h2, h4 {
+	font-weight: 400;
+}
+
+a {
+	color: #333333;
+}
+body a.red-action,
+body a.red-action:hover {
+	color: red;
+}
+
+body a.green-action,
+body a.green-action:hover {
+	color: green;
+}
+
+html, body {
+	height: 100%;
+	width: 750px;
+	margin: 0 auto;
+	color: #333333;
+}
+html {
+	width: 100%;
+}
+
+body > header {
+	float: left;
+	height: 100%;
+	width: 300px;
+}
+
+body > header nav li {
+	list-style: none;
+	width: 250px;
+}
+
+
+body > main {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	height: 100%;
+	-webkit-box-shadow: 0px 0 12px 7px rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0px 0 12px 7px rgba(0,0,0,0.1);
+			box-shadow: 0px 0 12px 7px rgba(0,0,0,0.1);
+	width: 450px;
+	border-width: 0px 1px;
+	border-color: #efefef;
+	overflow: auto;
+}
+
+body > footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100px;
+	height: 50px;
+	text-align: left;
+}
+
+body > main .message {
+	padding-top: 10px;
+}
+
+body > main .success {
+	color: green;
+}
+
+body > main .error {
+	color: red;
+}
+
+body > main form,
+body > main fieldset {
+	border: 0px;
+}
+
+body > main .input-group {
+	display: table;
+	margin-top: 10px;
+
+}
+
+body > main .input-group * {
+	display: table-cell;
+	vertical-align: middle;
+	height: 40px;
+}
+
+body > main .input-group label {
+	width: 100px;
+}
+
+body > main .input-group input[type="text"],
+article.section,
+body > main .input-group textarea {
+	width: 300px;
+	padding: 15px;
+	border: 0px;
+	outline: 0px;
+	color: #999999;
+}
+body > main article.section {
+	width: 100%;
+}
+body > main .input-group textarea {
+	height: 250px;
+	resize: none;
+}
+body > main label.top-align {
+	vertical-align: top;
+	padding-top: 12px;
+}
+
+
+body > main .input-group input[type="text"]:focus,
+body > main input[type="submit"]:focus,
+body > main .input-group textarea:focus,
+a.button:focus {
+	-webkit-box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.2);
+	   -moz-box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.2);
+			box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.2);
+	color: #333333;
+}
+body > main .input-group input[type="text"]:hover,
+body > main input[type="submit"]:hover,
+body > main article.section:hover,
+body > main .input-group textarea:hover,
+a.button:hover {
+	-webkit-box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.1);
+	   -moz-box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.1);
+			box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.1);
+	color: #666666;
+}
+
+body > main .input-group .magical,
+body > main article.section .magical {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	display: none;
+}
+body > main article.section .magical {
+	top: 16px;
+}
+.magical a {
+	margin-left: 3px;
+}
+
+body > main .input-group input[type="text"]:hover ~ .magical,
+body > main article.section:hover .magical {
+	display: block;
+}
+
+body > main .custom label:first-letter {
+	text-transform: uppercase;
+}
+
+body > main #create input[name="newattr"] {
+	width: 100px;
+}
+
+#section-list {
+	margin-top: 10px;
+}
+
+body > main input[type="submit"],
+a.button {
+	height: 40px;
+	width: 100%;
+	border: 0px;
+	border-top: 1px solid #efefef;
+	background-color: transparent;
+	text-decoration: underline;
+	color: #333333;
+	margin-top: 10px;
+}
+a.button {
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+}
+
+body > main input[type="submit"]:hover {
+	cursor: pointer;
+}

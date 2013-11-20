@@ -1,0 +1,44 @@
+{% extends '/admin/admin_tpl.html' %}
+
+{% block admin_main %}
+	<form action="{{ url_for('interface_update_system') }}" method="post" id="system">
+		<fieldset class="general">
+			<h3>System Properties</h3>
+			<h4>Basic</h4>
+			<div class="input-group">
+				<label for='name'>Name</label>
+				<input type="text" name="name" placeholder="Not defined" value="{{ sysname }}" />
+			</div>
+			<h4>Mailchimp</h4>
+			<div class="input-group">
+				<label for='mc_api_key'>API Key</label>
+				<input type="text" name="mc_api_key" placeholder="Not defined" value="{{ args.mailchimp.api_key }}" />
+			</div>
+			<div class="input-group">
+				<label for='mc_list_id'>List ID</label>
+				<input type="text" name="mc_list_id" placeholder="Not defined" value="{{ args.mailchimp.list_id }}" />
+			</div>
+		</fieldset>
+		<fieldset class="custom">
+			<h4>Custom Properties</h4>
+			{% for prop in args.custom_props %}
+				<div class="input-group">
+					<label for='{{ prop.attr }}'>{{ prop.attr }}</label>
+					<input type="text" name="{{ prop.attr }}" placeholder="Not defined" value="{{ prop.value }}" />
+					<a class="magical red-action" href="/interface/delete-prop/{{ prop.attr }}" title="Delete">Delete</a>
+				</div>
+			{% endfor %}
+		</fieldset>
+		<input type="submit" value="Update System" />
+	</form>
+	<h3>Create a property</h3>
+	<form action="/interface/create-prop" method="post" id="create">
+		<fieldset>
+			<div class="input-group">
+				<input type="text" name="newattr" placeholder="Attribute" />
+				<input type="text" name="newvalue" placeholder="Value" />
+			</div>
+		</fieldset>
+		<input type='submit' value="Create Property" />
+	</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'admin/admin_tpl.html' %}
+
+{% block admin_intro %}
+	<p>
+		Sections are the lifeblood of Feather. Click a section below to see what's involved in creating your own.
+	</p>
+{% endblock %}
+
+{% block admin_main %}
+	<div id="section-list">
+		{% for section in args.sections %}
+			<article class="section">
+				<h4>{{ section.title }}</h4>
+				<span class="magical">
+					<a href="{{ url_for('admin_sections_name', name=section.name) }}">Edit</a>
+					<a class="red-action" href="{{ url_for('interface_delete_section', name=section.name) }}">Delete</a>
+				</span>
+			</article>
+		{% endfor %}
+		<a href="{{ url_for('admin_create_section') }}" class="button" title="Create a section">Create a new section</a>
+	</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends '/admin/admin_tpl.html' %}
+
+{% block admin_main %}
+	<form action="{{ url_for('interface_edit_section') }}" method="post">
+		<div class="input-group">
+			<label>Title</label>
+			<input type="text" placeholder="Not Defined" name="title" value="{% if args.section %}{{ args.section.title }}{% endif %}" />
+		</div>
+		<div class="input-group">
+			<label>Name</label>
+			<input type="text" placeholder="Not Defined" name="name" value="{% if args.section %}{{ args.section.name }}{% endif %}" />
+		</div>
+		<div class="input-group">
+			<label class="top-align">Content</label>
+			<textarea type="text" placeholder="Not Defined" name="content">{% if args.section %}{{- args.section.content -}}{% endif %}</textarea>
+		</div>
+		<input type="submit" value="Save Section" />
+	</form>
+{% endblock %}

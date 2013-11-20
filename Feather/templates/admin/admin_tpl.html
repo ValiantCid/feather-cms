@@ -1,0 +1,56 @@
+<!doctype html>
+	<head>
+		{% if title %}
+			<title>{{ title }} - Admin - {{ sysname }}</title>
+		{% else %}
+			<title>Admin - {{ sysname }}</title>
+		{% endif %}
+		{% for css in site.css.header %}
+			<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='admin/css/') }}{{ css }}" />
+		{% endfor %}
+		{% for js in site.js.header %}
+			<script type="text/javascript" src="{{ url_for('static', filename='admin/js/') }}{{ js }}" /></script>
+		{% endfor %}
+	</head>
+	<body>
+		<header>
+			<h1>{{ sysname }}</h1>
+			<h2>Powered by Feather</h2>
+			<nav>
+				<ul>
+					<li><a class="button" href="{{ url_for('admin_sections') }}">Sections</a></li>
+					<!-- NOT YET IMPLEMENTED
+						<li><a href="{{ url_for('admin_users') }}">Users</a></li> -->
+					<li><a class="button" href="{{ url_for('admin_system') }}">System</a></li>
+					<li><a class="button green-action" href="{{ url_for('public_homepage') }}">Go to site</a></li>
+					<li><a class="button red-action" href="{{ url_for('interface_logout') }}">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>{{ title }}</h2>
+			{% if error != None %}
+				<div class="message error">
+					{{ error }}
+				</div>
+			{% endif %}
+			{% if success != None %}
+				<div class="message success">
+					{{ success }}
+				</div>
+			{% endif %}
+			{% block admin_intro%}{% endblock %}
+			{% block admin_main %}{% endblock %}
+		</main>
+		<footer>
+			{% block admin_footer %}{% endblock %}
+			
+		</footer>
+		{% for css in site.css.footer %}
+			<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='admin/css/') }}{{ css }}" />
+		{% endfor %}
+		{% for js in site.js.footer %}
+			<script type="text/javascript" src="{{ url_for('static', filename='admin/js/') }}{{ js }}" /></script>
+		{% endfor %}
+	</body>
+</html>

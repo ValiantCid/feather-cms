@@ -1,0 +1,22 @@
+<!doctype html>
+	<head>
+		<title>Login - {{ sysname }}</title>
+		{# header scripts get run here #}
+	</head>
+	<body class="login">
+		<header>
+			<h1>{{ sysname }}</h1>
+			<h2>Powered by Feather</h2>
+		</header>
+		<main>
+			{% if error != None %}
+				{% block login_error %}{% endblock %}
+			{% endif %}
+			{% if success != None %}
+				{% block login_success %}{% endblock %}
+			{% endif %}
+			{% block login_main %}{% endblock %}
+		</main>
+		{# footer scripts get run here #}
+	</body>
+</html>
