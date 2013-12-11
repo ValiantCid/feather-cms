@@ -1,4 +1,5 @@
 from flask import Flask
-from flask import render_template, session, redirect, request
 
 app = Flask(__name__)
+
+import routes_admin, routes_public, interfaces #required to make Flask work

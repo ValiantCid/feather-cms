@@ -1,4 +1,4 @@
-from flask import Flask, session
+from flask import session
 from flask.ext.sqlalchemy import SQLAlchemy
 import hashlib
 import mailchimp
@@ -6,6 +6,7 @@ from Feather import app
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data/data.db'
 db = SQLAlchemy(app)
+
 
 #: Define the Section class
 class Section(db.Model):
@@ -95,6 +96,7 @@ class SystemProperty(db.Model):
 	def get_full(cls, attr):
 		return cls.query.filter_by(attr=attr).first()
 
+
 #: Define the mailchimp class
 class MC(object):
 	def __init__(self, api_key, list_id):
@@ -104,6 +106,6 @@ class MC(object):
 			self.api = False
 		self.list_id = list_id
 
-	def subscribe_user(self, email, merge_vars = {}):
+	def subscribe_user(self, email, merge_vars={}):
 		if not self.api:
-			self.api.lists.subscribe(self.list_id, email, merge_vars)
+                        self.api.lists.subscribe(self.list_id, email, merge_vars)
