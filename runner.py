@@ -1,5 +1,4 @@
-from flask import Flask
-from Feather import app, routes_admin, routes_public, interfaces, config
+from Feather import app, config
 
 app.config.from_object(config.Config)
 

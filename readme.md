@@ -9,8 +9,8 @@ Version: pre-0.1 (Prototype)
 * Copy Feather's core files to your local machine
 * Open `config.py` in your favourite text editor or IDE.
 * Change the SECRET_CODE and INSTALL_CODE to something completely random. You may also make other alterations to suit your development style.
-* Run `sudo sh prep_feather.sh` in your terminal, followed by `. venv/bin/active` and `python runner.py`.
-* Browse to <host_name>/feather-install/<INSTALL_CODE> to finalise installation.
+* Run `sudo sh prep_feather.sh` in your terminal, followed by `python runner.py`.
+* Browse to <host_name>/feather-install/INSTALL_CODE to finalise installation.
 
 ## Development
 Making a useable website with Feather is remarkably simple. All routes are handled by `routes_public.py`, all template files go into templates/public and all static files (ie. js, css, etc.) go into static/public.
