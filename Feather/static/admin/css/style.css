@@ -108,7 +108,7 @@ body > main .input-group {
 body > main .input-group * {
 	display: table-cell;
 	vertical-align: middle;
-	height: 40px;
+	height: 45px;
 }
 
 body > main .input-group label {
@@ -116,6 +116,7 @@ body > main .input-group label {
 }
 
 body > main .input-group input[type="text"],
+body > main .input-group input[type="password"],
 article.section,
 body > main .input-group textarea {
 	width: 300px;
@@ -138,6 +139,7 @@ body > main label.top-align {
 
 
 body > main .input-group input[type="text"]:focus,
+body > main .input-group input[type="password"]:focus,
 body > main input[type="submit"]:focus,
 body > main .input-group textarea:focus,
 a.button:focus {
@@ -147,6 +149,7 @@ a.button:focus {
 	color: #333333;
 }
 body > main .input-group input[type="text"]:hover,
+body > main .input-group input[type="password"]:hover,
 body > main input[type="submit"]:hover,
 body > main article.section:hover,
 body > main .input-group textarea:hover,
@@ -155,6 +158,14 @@ a.button:hover {
 	   -moz-box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.1);
 			box-shadow: 3px 2px 23px 1px rgba(0,0,0,0.1);
 	color: #666666;
+}
+body > main .input-group input[disabled],
+body > main .input-group input[disabled]:hover{
+    color: #333333;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
 }
 
 body > main .input-group .magical,

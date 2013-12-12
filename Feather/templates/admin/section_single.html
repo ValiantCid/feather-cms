@@ -8,7 +8,11 @@
 		</div>
 		<div class="input-group">
 			<label>Name</label>
-			<input type="text" placeholder="Not Defined" name="name" value="{% if args.section %}{{ args.section.name }}{% endif %}" />
+            {% if args.section %}
+                <input type="text" disabled value="{% if args.section %}{{ args.section.name }}{% endif %}" />
+            {% else %}
+                <input type="text" placeholder="Not Defined" name="name" />
+            {% endif %}
 		</div>
 		<div class="input-group">
 			<label class="top-align">Content</label>

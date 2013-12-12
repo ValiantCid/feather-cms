@@ -19,10 +19,9 @@
 			<nav>
 				<ul>
 					<li><a class="button" href="{{ url_for('admin_sections') }}">Sections</a></li>
-					<!-- NOT YET IMPLEMENTED
-						<li><a href="{{ url_for('admin_users') }}">Users</a></li> -->
+				    <li><a class="button" href="{{ url_for('admin_users') }}">Admin</a></li>
 					<li><a class="button" href="{{ url_for('admin_system') }}">System</a></li>
-					<li><a class="button green-action" href="{{ url_for('public_homepage') }}">Go to site</a></li>
+					<li><a target="_blank" class="button green-action" href="{{ url_for('public_homepage') }}">Go to site</a></li>
 					<li><a class="button red-action" href="{{ url_for('interface_logout') }}">Logout</a></li>
 				</ul>
 			</nav>

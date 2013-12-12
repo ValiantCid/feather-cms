@@ -1,0 +1,20 @@
+{% extends '/admin/admin_tpl.html' %}
+
+{% block admin_main %}
+	<form action="{{ url_for('interface_edit_user') }}" method="post">
+        <input type="hidden" value="{{ args.logged_in_user }}" name="username" />
+		<div class="input-group">
+            <label>Username</label>
+			<input type="text" disabled value="{{ args.logged_in_user }}" name="username_disabled" />
+        </div>
+        <div class="input-group">
+            <label>New Password</label>
+			<input type="password" name="password" placeholder="Type a secure password" value="" />
+        </div>
+        <div class="input-group">
+            <label>Confirm Password</label>
+			<input type="password" name="confirm_password" placeholder="Repeat your password" value="" />
+		</div>
+		<input type="submit" value="Save User" />
+	</form>
+{% endblock %}
