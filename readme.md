@@ -3,7 +3,7 @@ Concieved, Designed and Developed by [Cam Wright](mailto:cam.wright@gmail.com)
 
 Based upon Flask, a simple web framework for Python.
 
-Version: pre-0.1 (Prototype)
+Version: release-0.1
 
 ## Installation
 * Copy Feather's core files to your local machine
@@ -11,6 +11,7 @@ Version: pre-0.1 (Prototype)
 * Change the SECRET_CODE and INSTALL_CODE to something completely random. You may also make other alterations to suit your development style.
 * Run `sudo sh prep_feather.sh` in your terminal, followed by `python runner.py`.
 * Browse to <host_name>/feather-install/INSTALL_CODE to finalise installation.
+* Default access is `admin` / `password`. This can be changed on the Admin page.
 
 ## Development
 Making a useable website with Feather is remarkably simple. All routes are handled by `routes_public.py`, all template files go into templates/public and all static files (ie. js, css, etc.) go into static/public.
