@@ -1,7 +1,6 @@
 from flask import session
 from flask.ext.sqlalchemy import SQLAlchemy
-import hashlib
-import mailchimp
+import hashlib, mailchimp, markdown
 from Feather import app
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data/data.db'
