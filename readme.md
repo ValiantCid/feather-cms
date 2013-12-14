@@ -26,3 +26,6 @@ All other development is simple Flask + SQLAlchemy. Head to [Flask's in-depth do
 
 ## Production
 Browse to [Flask's Deployment Documentation](http://flask.pocoo.org/docs/deploying/) for deployment options. It is recommended that the DEBUG constant in `config.py` is set to `False` while the site is in production- this prevents any unwanted reloads when files change. 
+
+## CMS
+Feather uses Markdown as it's templating language. In the Sections area in the back end, users can write in markdown which Feather will convert to html when passed through the `md_to_html` filter (note, it will also need to be passed through the `safe` filter otherwise it will convert html symbols to entities)
