@@ -183,8 +183,9 @@ body > main article.section .magical {
 }
 
 body > main .input-group input[type="text"]:hover ~ .magical,
-body > main article.section:hover .magical {
-	display: block;
+body > main article.section:hover .magical,
+.magical:hover {
+	display: block !important;
 }
 
 body > main .custom label:first-letter {
