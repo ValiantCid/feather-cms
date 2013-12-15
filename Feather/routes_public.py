@@ -40,7 +40,7 @@ def render_public_template(template, title, args):
 @app.route('/')
 def public_homepage():
     return render_public_template(
-        'public/test.html',
+        'public/default.html',
         'HomePage',
         {
             'sections': Section.get_all()
