@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{{ title }} - {{ sysname }}</title>
+        <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='public/css/default.css') }}" />
+    </head>
+    <body>
+        <header>
+            <h1>{{ sysname }}</h1>
+        </header>
+        <section>
+            {% for section in args.sections %}
+                <h2>{{ section.title }}</h2>
+                <div class="content">
+                    {{ section.content | md_to_html | safe }}
+                </div>
+            {% endfor %}
+        </section>
+        <footer>
+            Powered by <a target="_blank" href="http://github.com/valiantcid/feather-cms" title="Feather">Feather</a>
+        </footer>
+    </body>
+</html>

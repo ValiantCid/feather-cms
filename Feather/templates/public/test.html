@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        {% for section in args.sections %}
+            <h1>{{ section.title }}</h1>
+            <div class="content">
+                {{ section.content | md_to_html | safe }}
+            </div>
+        {% endfor %}
+    </body>
+</html>

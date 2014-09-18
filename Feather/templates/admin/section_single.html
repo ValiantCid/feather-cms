@@ -9,7 +9,8 @@
 		<div class="input-group">
 			<label>Name</label>
             {% if args.section %}
-                <input type="text" disabled value="{% if args.section %}{{ args.section.name }}{% endif %}" />
+                <input type="text" disabled value="{{ args.section.name }}" />
+                <input type="hidden" value="{{ args.section.name }}" name="name" />
             {% else %}
                 <input type="text" placeholder="Not Defined" name="name" />
             {% endif %}
